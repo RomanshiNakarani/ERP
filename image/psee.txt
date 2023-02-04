@@ -1,0 +1,120 @@
+bootstrap:
+-Bootstrap is a free and open source front end development framework for the creation of websites and web apps
+
+-The Bootstrap framework is built on HTML, CSS, and JavaScript (JS) to facilitate the development of responsive
+
+
+javascript:
+-to create dynamic and interactive web content like applications and browsers
+
+jquery:
+-JQuery Uses the resources that are provided by JavaScript to make things easier. It is a lightweight JavaScript library.
+
+basic of PHP:
+- powerful tool for making dynamic and interactive Web pages
+
+PHP Validation:
+-Validation in PHP is the process where we check if the input information in the various fields in any form such as text, checkbox or radio button, etc, submitted by the end-user in the form is correct or not using HTML code.
+
+what is session cookies in php?
+-A session is a global variable stored on the server. Each session is assigned a unique id which is used to retrieve stored values. Whenever a session is created, a cookie containing the unique session id is stored on the user's computer and returned with every request to the server.
+-What is the difference between session and cookie in PHP?
+The main difference between a session and a cookie is that session data is stored on the server, whereas cookies store data in the visitor's browser. Sessions are more secure than cookies as it is stored in server.
+
+Database related functions:
+-affected_rows()
+-commit()
+-connect()
+-connect_errno()
+-connect_error()
+-fetch_array()
+-fetch_assoc()
+-fetch_object()
+-
+
+Get, Post, and other PHP Global Variables:
+$GLOBALS:is a PHP super global variable which is used to access global variables from anywhere in the PHP script 
+
+$_SERVER:is a PHP super global variable which holds information about headers, paths, and script locations.
+
+$_REQUEST:is a PHP super global variable which is used to collect data after submitting an HTML form
+
+$_POST:is a PHP super global variable which is used to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables.
+
+$_GET:PHP $_GET is a PHP super global variable which is used to collect form data after submitting an HTML form with method="get".$_GET can also collect data sent in the URL
+
+$_FILES: is an associative array containing items uploaded via HTTP POST method.
+
+$_ENV:is another superglobal associative array in PHP. It stores environment variables available to current script.
+$_COOKIE:
+$_SESSION:
+
+AJAX:This means that it is possible to update parts of a web page, without reloading the whole page.
+-Asynchronous JavaScript and XML
+what is XML?
+- is used to structure, store and transport data from one system to another
+
+
+
+
+laravel:
+
+MVC Architecture Of Laravel
+Model (M)–A model handles data used by the web application. (php artisan make:model)
+(V)–A view helps to display data to the user. Controller (create a view by placing a file with the .blade.php)
+(C)–A controller interacts with the model to create data for the view.(php artisan make:controller)
+
+laravel basics:
+-Laravel is a powerful MVC PHP framework, designed for developers who need a simple and elegant toolkit to create full-featured web applications.
+-laravel is server-side backend framework
+-Laravel is a framework built using PHP
+-What is composer in Laravel?
+In Laravel, the composer is a tool that includes all the dependencies and libraries. It helps the user to develop a project with respect to the mentioned framework. Third-party libraries can be installed easily using composer. Composer is used to managing its dependencies and the dependencies are noted in composer.
+
+What is middleware in Laravel?
+Laravel Middleware acts as a bridge between a request and a reaction. It is a type of sifting component. Laravel incorporates a middleware that confirms whether or not the client of the application is verified. If the client is confirmed, it diverts to the home page otherwise, it diverts to the login page.
+
+What is artisan in Laravel?
+Artisan is the name of the command-line interface included with Laravel. It provides a number of helpful commands for your use while developing your application. It is driven by the powerful Symfony Console component.
+
+
+What is migrate in Laravel?
+Laravel Migration is an essential feature in Laravel that allows you to create a table in your database. It allows you to modify and share the application's database schema. You can modify the table by adding a new column or deleting an existing column.
+
+What is seeding in Laravel?
+Laravel offers a tool to include dummy data to the database automatically. This process is called seeding. Developers can add simply testing data to their database table using the database seeder. It is extremely useful as testing with various data types allows developers to detect bugs and optimize performance.
+
+What does vendor directory contain?
+The vendor directory contains your Composer dependencies.
+
+Database connection related questions.(laravel):
+Step 1: First we have to create a database. So, we will start Apache and MySQL server form XAMPP Control Panel.
+
+Step 2: Open any web browser, like Chrome, and type localhost/phpmyadmin in URL.
+
+Step 3: Now, click on the Databases tab and there, write the database named as geeksforgeeks and click on create.
+
+Step 4: Now, you will have to find a file named .env, where you will have to specify the details for the MySQL server, like database name, username, etc. In that file, you will have to search for names starting with DB_.
+
+Step 5: In that, you will find the DB_CONNECTION=mysql line. Below this are all the details specified for the database connection. You will have to specify the database name geeksforgeeks, that we created, after DB_DATABASE= and also specify username and password according to your need. Then save the file.
+
+Step 6: Now, we will create a View in resources/views directory
+then in view file:
+<?php
+            if(DB::connection()->getPdo())
+            {
+                echo "Successfully connected to the database => "
+                             .DB::connection()->getDatabaseName();
+            }
+        ?>
+
+Step 7: Write the following route in the ‘web.php’ file in ‘routes’ directory.
+Route::get('gfg', function () {
+    return view('gfg');
+});
+
+Step 8: Now, run the following Laravel artisan command to start the server:
+php artisan serve
+
+Step 9: And now, open the provided URL by the artisan in the browser with /gfg at the end.
+http://127.0.0.1:8000/gfg
